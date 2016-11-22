@@ -155,6 +155,16 @@ gulp.task('js-libs', function() {
     .pipe(reload({stream:true}));
 });
 
+gulp.task('fonts', function() {
+    gulp.src(bases.app + 'fonts/*')
+        .pipe(gulp.dest(bases.dist + 'css/fonts/'));
+});
+
+gulp.task('html', function() {
+    gulp.src(bases.app + 'html/*')
+        .pipe(gulp.dest(bases.dist + 'css/pages/'));
+});
+
 
 gulp.task('copy', function() {
 
@@ -196,6 +206,7 @@ gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
   gulp.watch(bases.app + './*.html', ['minify-html']);
   gulp.watch(bases.app + 'img/*', ['imagemin']);
+  gulp.watch(bases.app + 'js/*.js', ['js-custom']);
 });
 
 gulp.task('imagemin', function() {
@@ -230,9 +241,9 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'fonts', 'watch', done);
 });
 
 gulp.task('build', function(done) {
-  runSequence('clean:dist', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'copy', done);
+  runSequence('clean:dist', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'fonts', 'copy', done);
 });

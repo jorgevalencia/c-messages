@@ -1,7 +1,7 @@
 @viewport { width: device-width; }
 
 html {
-  background-color: #fff;
+  background-color: $color-background;
   box-sizing: border-box;
   height: 100%;
 }
@@ -13,7 +13,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: $c-primary;
+  color: $color-text;
   font-family: $font-family-default;
   min-height: 100%;
   overflow-x: hidden;
@@ -22,7 +22,7 @@ body {
 
 a {
   background: transparent;
-  color: $c-link;
+  color: $color-link;
   text-decoration: none;
   transition: color .2s;
 }
