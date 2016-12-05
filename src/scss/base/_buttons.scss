@@ -1,43 +1,40 @@
-@viewport { width: device-width; }
+.Button {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    transition: all .3s ease-in-out;
 
-html {
-  background-color: $color-background;
-  box-sizing: border-box;
-  height: 100%;
-}
+    &.has-arrow {
+        align-items: center;
+        display: flex;
 
-* {
-  &:before,
-  &:after { box-sizing: inherit; }
-}
+        .u-icon {
+            fill: currentColor;
+            height: 10px;
+            margin-left: 8px;
+            width: 6px;
+        }
+    }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  color: $color-text;
-  font-family: $font-family-default;
-  min-height: 100%;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-}
+    &.is-color {
+        color: $c-primary;
+        &:hover { color: $c-primary; }
+        &:active { color: $c-primary; }
+    }
 
-a {
-  background: transparent;
-  color: $color-link;
-  text-decoration: none;
-  transition: color .2s;
-}
+    &.is-solid {
+        border-radius: get-rems(5px);
+        font-size: get-rems(15px);
+        margin-bottom: 0;
+        padding: get-rems(12px) get-rems(24px);
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-display;
-  font-weight: normal;
+        &.bg-green {
+            background-color: $c-primary;
+            color: $c-white;
+            display: inline-block;
+            &:hover { background-color: $c-primary; }
+            &:active { background-color: $c-primary; }
+        }
+    }
 }

@@ -18,26 +18,29 @@ $c-black: #000;
 
 // main color palette
 // =============
-$c-primary:             #000;
-$c-secondary:           #000;
-$c-accent:              #000;
-$c-shadow:              #000;
-$c-note:                #000;
+$c-primary:  #000;
+$c-secondary: #000;
+$c-accent: #000;
 
 // Color Links
-$c-link:                #000;
-$c-link-hover:          #000;
-$c-link-visited:        #000;
+$c-link: #000;
+$c-link-hover: #000;
+$c-link-visited: #000;
 
 // Color Messages
-$c-message:             #f4ecbb;
-$c-success:             #2cde2c;
-$c-warning:             #cf8600;
-$c-important:           #d00;
-$c-notice:              #66b;
+$c-message: #f4ecbb;
+$c-success: #2cde2c;
+$c-warning: #cf8600;
+$c-important: #d00;
+$c-notice: #66b;
 
 /* Typography & Vertical Rhythym */
 $font-primary: 'atrotissemisans-lightregular', 'Helvetica', 'Arial';
+$global-min-font: 16px;
+$global-max-font: 21px;
+$base-font-size: 1rem;
+$base-line-height-strip: 1.5;
+$base-line-height: $base-line-height-strip * $base-font-size;
 
 /* Media Queries */
 $s0: (0, 30rem);             /* 0, 480px */

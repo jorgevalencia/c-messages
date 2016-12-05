@@ -97,7 +97,7 @@ rules:
     -
       style: lowercase # uppercase
   indentation:
-    - 1
+    - 4
     -
       size: 2
   leading-zero: 1
