@@ -1,0 +1,24 @@
+.container {
+  padding: space();
+  text-align: center;
+}
+
+.content {
+  padding: space();
+}
+
+.header {
+  color: $c-dark;
+  opacity: .5;
+}
+
+.footer {
+  color: $c-dark;
+  opacity: .5;
+}
+
+.separator {
+  display: block;
+  height: 4px;
+  width: 20px;
+}

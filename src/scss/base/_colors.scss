@@ -1,0 +1,40 @@
+.container-message {
+  background-color: $c-red
+}
+
+.container-messageInverted {
+  background-color: $c-green
+}
+
+.card-present {
+  background-color: $c-red;
+  color: $c-white;
+
+  .title {
+    color: $c-beige;
+  }
+}
+
+.card-trivia {
+  background-color: $c-green;
+  color: $c-white;
+
+  .title {
+    color: $c-beige;
+  }
+}
+
+.card-message {
+  background-color: $c-beige;
+  color: $c-dark;
+
+  .title {
+    color: $c-red;
+  }
+
+  &.inverted {
+    .title {
+      color: $c-green;
+    }
+  }
+}

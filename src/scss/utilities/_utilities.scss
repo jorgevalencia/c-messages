@@ -41,7 +41,15 @@
 
 .u-wysiwyg {
     h1, h2, h3, h4, h5, h6 {
+
         padding: 0 0 space();
+    }
+
+    a {
+        border-bottom: 1px solid default;
+        color: default;
+
+        &:hover { opacity: .75; }
     }
 
     p, img, .u-table, .u-videoFullWidth, ul, ol {
@@ -104,6 +112,7 @@
     }
 }
 
-.u-dottedBottom {
-    @include dotted-bottom();
+.u-neutralColor {
+  color: $c-dark;
+  opacity: .5;
 }
